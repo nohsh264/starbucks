@@ -1,5 +1,5 @@
 const searchEl=document.querySelector('.search'); //document는 html 파일이라 생각//
-const searchInputEl=searchEl.querySelector('input') // 찾은 searchEl에서 input 찾는게 효율적
+const searchInputEl=searchEl.querySelector('input'); // 찾은 searchEl에서 input 찾는게 효율적
 
 searchEl.addEventListener('click',function(){
     searchInputEl.focus();    

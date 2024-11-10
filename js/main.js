@@ -72,8 +72,7 @@ new Swiper('.awards .swiper-container',{
         prevEl:'.awards .swiper-prev',
         nextEl:'.awards .swiper-next'
     }
-
-})
+});
 
 // 보이거나 안보이거 하게 하는 정도는 gsap말고 css로 제어 가능
 const promotionEl=document.querySelector('.promotion');
