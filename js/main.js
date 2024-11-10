@@ -1,20 +1,3 @@
-const searchEl=document.querySelector('.search'); //document는 html 파일이라 생각//
-const searchInputEl=searchEl.querySelector('input') // 찾은 searchEl에서 input 찾는게 효율적
-
-searchEl.addEventListener('click',function(){
-    searchInputEl.focus();    
-});
-
-searchInputEl.addEventListener('focus',function(){
-    searchEl.classList.add('focused');
-    searchInputEl.setAttribute('placeholder','통합검색'); //attribute는 속성을 의미. html 속성을 정한다.
-});
-
-searchInputEl.addEventListener('blur',function(){ //blur는 focus와 반대
-    searchEl.classList.remove('focused');
-    searchInputEl.setAttribute('placeholder',''); //focus되면 class에 focus가 추가되고 없애면 없어짐. 클래스가 추가되면 추가 작업 가능
-});
-
 const badgeEl=document.querySelector('header .badges');
 const toTopEl=document.querySelector('#to-top');
 
@@ -89,8 +72,7 @@ new Swiper('.awards .swiper-container',{
         prevEl:'.awards .swiper-prev',
         nextEl:'.awards .swiper-next'
     }
-
-})
+});
 
 // 보이거나 안보이거 하게 하는 정도는 gsap말고 css로 제어 가능
 const promotionEl=document.querySelector('.promotion');
@@ -139,6 +121,4 @@ spyEls.forEach(function(spyEl){
         .addTo(new ScrollMagic.Controller()); //우리가 추가한 옵션들을 내부의 컨트롤러의 내용을 할당해서 실제로 동작할 수 있는 구조를 만듦.
 }); 
 
-const thisYear=document.querySelector('.this-year');
-thisYear.textContent=new Date().getFullYear() //2021을 thisYear의 text로 지정
 
